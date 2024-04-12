@@ -5,3 +5,10 @@
 @model VidlyApp.ViewModels.CustomersViewModel;
 
 <h2>@Model.Customer.Name</h2>
+
+<ul>
+    <li>Membership Type: @Model.Customer.MembershipType.Name</li>
+    @if (Model.Customer.Birthday != null){
+        <li>Birthday: @Model.Customer.Birthday.Value.ToShortDateString</li>
+    }
+</ul>
